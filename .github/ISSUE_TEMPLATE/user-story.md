@@ -1,3 +1,11 @@
+---
+name: User Story
+about: Create a user story to describe a feature or requirement
+title: "[User Story] "
+labels: user story
+assignees: ''
+---
+
 **As a** [role]  
 **I need** [function]  
 **So that** [benefit]  
