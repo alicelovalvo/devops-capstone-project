@@ -61,6 +61,7 @@ def create_accounts():
 # LIST ALL ACCOUNTS
 ######################################################################
 
+
 @app.route("/accounts", methods=["GET"])
 def list_accounts():
     """
@@ -78,6 +79,7 @@ def list_accounts():
 # READ AN ACCOUNT
 ######################################################################
 
+
 @app.route("/accounts/<id>", methods=["GET"])
 def read_account(id):
     """
@@ -90,10 +92,11 @@ def read_account(id):
         abort(status.HTTP_404_NOT_FOUND, f"Account with id [{id}] could not be found.")
 
     return account.serialize(), status.HTTP_200_OK
-    
+
 ######################################################################
 # UPDATE AN EXISTING ACCOUNT
 ######################################################################
+
 
 @app.route("/accounts/<id>", methods=["PUT"])
 def update_account(id):
@@ -111,10 +114,10 @@ def update_account(id):
 
     return account.serialize(), status.HTTP_200_OK
 
-
 ######################################################################
 # DELETE AN ACCOUNT
 ######################################################################
+
 
 @app.route("/accounts/<id>", methods=["DELETE"])
 def delete_account(id):
@@ -129,7 +132,6 @@ def delete_account(id):
 
     account.delete()
     return "", status.HTTP_204_NO_CONTENT
-
 
 ######################################################################
 #  U T I L I T Y   F U N C T I O N S
